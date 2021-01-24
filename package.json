@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/immanuala07/NodeJS_Examples/issues"
   },
-  "homepage": "https://github.com/immanuala07/NodeJS_Examples#readme"
+  "homepage": "https://github.com/immanuala07/NodeJS_Examples#readme",
+  "dependencies": {
+    "validator": "^10.8.0"
+  }
 }
