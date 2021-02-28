@@ -1,15 +1,15 @@
 /**
  * `npm i yargs@12.0.2` before `node app.js`
- * execute this code as `node app.js remove --title="Note title 1"`
+ * execute this code as `node app.js read --title="Note title 1"`
  */
 const yargs = require('yargs')
 const notes = require('../utils.js')
 
-//You have to provide the yargs.parse(); or yargs.argv; after defining all the commands.
+// You have to provide the yargs.parse(); or yargs.argv; after defining all the commands.
 yargs
     .command({
-        command: 'remove',
-        describe: 'Remove a note',
+        command: 'read',
+        describe: 'reading the notes',
         builder: {
             //builder object to give hints about the options that your command accepts
             title: {
@@ -17,12 +17,12 @@ yargs
                 demandOption: true, // This option is used to say whether title is required command line while executing the prog like
                 // demandOption: false - execute the prog as 'node prog.js add'
                 // demandOption: true - execute the prog as 'node prog.js add --title'
-                type: 'string' // Value for the title option in progam should be the string like
-                    // execute the prog as 'node prog.js add --title="My title"
+                type: 'string', // Value for the title option in progam should be the string like
+                // execute the prog as 'node prog.js add --title="My title"
             }
         },
         handler: (argv) => {
-            notes.removeNotes(argv.title)
+            notes.readNotes(argv.title)
                 // console.log("Title: ", argv.title); // prints the note title provided in the prog comand line args
                 // console.log("Body: ", argv.body); // prints the note description provided in the prog comand line args
         }
