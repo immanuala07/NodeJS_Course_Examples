@@ -15,7 +15,7 @@ const yargs = require('yargs')
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
-    handler: function () {
+    handler: function() {
         console.log('Adding the note')
     }
 }).argv;
@@ -23,7 +23,7 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
-    handler: function () {
+    handler: function() {
         console.log('Removing the note')
     }
 }).parse();
@@ -31,7 +31,7 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'listing the note',
-    handler: function () {
+    handler: function() {
         console.log('Listing the note')
     }
 }).argv;
@@ -39,7 +39,7 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'Read a note',
-    handler: function () {
+    handler: function() {
         console.log('Reading the note')
     }
 }).parse();

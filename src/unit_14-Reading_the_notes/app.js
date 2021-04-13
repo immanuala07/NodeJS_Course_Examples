@@ -22,6 +22,7 @@ yargs
             }
         },
         handler: (argv) => {
+            debugger;
             notes.readNotes(argv.title)
                 // console.log("Title: ", argv.title); // prints the note title provided in the prog comand line args
                 // console.log("Body: ", argv.body); // prints the note description provided in the prog comand line args
